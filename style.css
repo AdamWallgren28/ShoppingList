@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {font-size: xx-large;}
+h1, h2, h3, h4, h5, h6, p {
+    color: aqua;
+    font-family:'Courier New', Courier, monospace;
+}
+h2 {margin: 1rem;}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 6rem;
+    background-color: black;
+    
+}
+        .hem{
+            padding-top: 1rem;
+            padding-left: 4rem;
+        }
+                 
+
+header {
+    padding: 2rem;
+    background: linear-gradient(to bottom, black, darkgrey), url("hockeyBackground.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+    .introDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40vw;
+    }
+            .bildBox {
+                display: flex;
+                justify-content: center;
+            }           
+                    .picContainer{
+                        
+                        
+                        overflow: hidden;
+                        display: inline-block;
+                        position: relative;
+                    }
+                    .profilBild, .picContainer {
+                        width: 18vw;
+                        filter: grayscale(100%);
+                    }
+                    .filterBild {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 100%; 
+                        height: 50%;
+                        z-index: 1;
+                        background: linear-gradient(to top, hsla(0, 0%, 57%, 0.75), transparent);
+                        animation: slide 3s infinite;
+                    }
+                    @keyframes slide {
+                        0% {transform: translateY(-300%);}
+                        100% {transform: translateY(100%);}
+                    }
+main {    
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.projectSection {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        .projektBox {
+            width: 40vw;
+            background: aquamarine;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 2rem 0rem;
+        }
+        .projektRubrik {
+            color: black;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        
+        li button {
+            font-size: 10px;
+            margin-left: 20px;
+            color: darkslategrey;
+        }
+
+        button:hover {
+            background-color: darkgrey;
+        }
+        button:active {
+            color: aquamarine;
+        }
+
+        
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: black;
+}
+    .footContent {
+        width: 40vw;
+    }
+        .cvLinks {
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+        .cvLink {
+            height: 2.5rem;
+            min-width: 2.5rem;
+            
+            margin-right: 1rem;
+            background-color: aqua;
+            border-radius: 3rem;
+            border-style: solid;
+            border-radius: 1rem;
+            border-color: grey;
+            border-width: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0rem;
+
+        }
+    
+            .cvLink p {
+                color: black;
+                margin: 0 1rem;
+
+            }
+            .cvLinkImg {
+                width: 2rem;
+                
+                
+            }
+
+@media screen and (max-width: 750px) {
+    nav {
+        height: 7rem;
+    }
+        .hem {
+            padding-top: 0;
+            padding-left: 1rem;
+        }
+
+    .introDiv{
+        flex-direction: column;
+    }
+        .picContainer, .profilBild {
+            width: 36vw;
+            height: 46vw;
+        
+        }
+        .filterBild {
+            background: linear-gradient(to top, hsla(0, 0%, 57%, 0.75), transparent);
+        }
+
+    .projektBox, .contact, .footContent {
+        width: 70vw;
+    }
+}

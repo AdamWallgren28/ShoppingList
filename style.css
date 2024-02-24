@@ -7,9 +7,10 @@ body {
 h1 {font-size: xx-large;}
 h1, h2, h3, h4, h5, h6, p {
     color: aqua;
-    font-family:'Courier New', Courier, monospace;
+    font-family:Arial, Helvetica, sans-serif;
 }
-h2 {margin: 1rem;}
+
+a {text-decoration: none;}
 
 nav {
     position: sticky;
@@ -17,17 +18,14 @@ nav {
     z-index: 2;
     height: 6rem;
     background-color: black;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-        .hem{
-            padding-top: 1rem;
-            padding-left: 4rem;
-        }
-                 
 
 header {
     padding: 2rem;
-    background: linear-gradient(to bottom, black, darkgrey), url("hockeyBackground.jpg");
+    background: linear-gradient(to bottom, black, darkgrey);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,8 +42,6 @@ header {
                 justify-content: center;
             }           
                     .picContainer{
-                        
-                        
                         overflow: hidden;
                         display: inline-block;
                         position: relative;
@@ -61,7 +57,7 @@ header {
                         width: 100%; 
                         height: 50%;
                         z-index: 1;
-                        background: linear-gradient(to top, hsla(0, 0%, 57%, 0.75), transparent);
+                        background: linear-gradient(to top, hsla(0, 0%, 57%), transparent);
                         animation: slide 3s infinite;
                     }
                     @keyframes slide {
@@ -83,10 +79,11 @@ main {
 }
         .projektBox {
             width: 40vw;
-            background: aquamarine;
+            background: aqua;
             padding: 1rem;
             border-radius: 1rem;
             margin: 2rem 0rem;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
         }
         .projektRubrik {
             color: black;
@@ -125,42 +122,37 @@ footer {
             justify-content: flex-start;
             
         }
-        .cvLink {
-            height: 2.5rem;
-            min-width: 2.5rem;
-            
-            margin-right: 1rem;
-            background-color: aqua;
-            border-radius: 3rem;
-            border-style: solid;
-            border-radius: 1rem;
-            border-color: grey;
-            border-width: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0rem;
-
-        }
-    
-            .cvLink p {
+            .cvLinks a {
                 color: black;
-                margin: 0 1rem;
-
-            }
-            .cvLinkImg {
-                width: 2rem;
+                height: 2.5rem;
+                min-width: 2.5rem;
+                margin-right: 1rem;
+                background-color: aqua;
+                border-radius: 3rem;
+                border-style: solid;
+                border-radius: 1rem;
+                border-color: grey;
+                border-width: 1px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 
-                
             }
+                .cvLinks a:nth-child(1){
+            padding: 0 0.5rem;
+                }
+                .cvLinkImg {
+                    width: 2rem;
+                }
 
 @media screen and (max-width: 750px) {
     nav {
         height: 7rem;
     }
+    h2 {margin: 1rem;}
         .hem {
             padding-top: 0;
-            padding-left: 1rem;
+            padding-left: 2rem;
         }
 
     .introDiv{

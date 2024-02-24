@@ -22,6 +22,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+nav h1 {margin: 0 1rem;}
 
 header {
     padding: 2rem;
@@ -58,11 +59,11 @@ header {
                         height: 50%;
                         z-index: 1;
                         background: linear-gradient(to top, hsla(0, 0%, 57%), transparent);
-                        animation: slide 3s infinite;
+                        animation: slide 5s infinite;
                     }
                     @keyframes slide {
                         0% {transform: translateY(-300%);}
-                        100% {transform: translateY(100%);}
+                        100% {transform: translateY(600%);}
                     }
 main {    
     background-color: darkgrey;
@@ -150,13 +151,9 @@ footer {
 
 @media screen and (max-width: 750px) {
     nav {
-        height: 7rem;
+        height: 9rem;
     }
-    h2 {margin: 1rem;}
-        .hem {
-            padding-top: 0;
-            padding-left: 2rem;
-        }
+   
 
     .introDiv{
         flex-direction: column;

@@ -6,16 +6,18 @@ let btn = document.querySelector('#btn');
 //lägger till li i ul
 function addItem() {
     let myItem = input.value;
-    
-    let listItem = document.createElement('li');    //skapar li-elemnt
-    let listText = document.createElement('span');  //skapar textspan
-    let listBtn = document.createElement('button'); //skappar knapp (för delete)
-
-    listItem.appendChild(listText);                 //infogar textSpan i li
-    listText.textContent = myItem;                  //infogar input i textSpan
-    listItem.appendChild(listBtn);                  //infogar knapp i li
-    listBtn.textContent = "Delete";                 //infogar text i knapp
-    list.appendChild(listItem);                     // infogar li i ul
+    //skapar li-elemnt , textspan & knapp (för delete)
+    let listItem = document.createElement('li');
+    let listText = document.createElement('span'); 
+    let listBtn = document.createElement('button');
+    //infogar textSpan i li & input i textSpan
+    //infogar knapp i li & text i knapp
+    listItem.appendChild(listText);                 
+    listText.textContent = myItem;       
+    listItem.appendChild(listBtn);                  
+    listBtn.textContent = "Delete";
+    //infogar li i ul 
+    list.appendChild(listItem);                     
 
     //tar bort li-element
     listBtn.addEventListener('click', () => {

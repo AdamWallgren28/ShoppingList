@@ -1,3 +1,4 @@
+/*global styling*/
 body {
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@ a {
     text-decoration: none;
 }
 
+/*hemsideRubrik*/
 nav {
     position: sticky;
     top: 0;
@@ -52,10 +54,12 @@ header {
                         display: inline-block;
                         position: relative;
                     }
+                    /*projektikon*/
                     .profilBild, .picContainer {
                         width: 18vw;
                         filter: grayscale(100%);
                     }
+                    /*bild för filtereffekt*/
                     .filterBild {
                         position: absolute;
                         top: 50%;

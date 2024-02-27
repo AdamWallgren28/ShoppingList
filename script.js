@@ -3,33 +3,31 @@ let list = document.querySelector('#myList');
 let input = document.querySelector('#item');
 let btn = document.querySelector('#btn');
 
+//lägger till li i ul
 function addItem() {
     let myItem = input.value;
     
+    let listItem = document.createElement('li');    //skapar li-elemnt
+    let listText = document.createElement('span');  //skapar textspan
+    let listBtn = document.createElement('button'); //skappar knapp (för delete)
 
-    let listItem = document.createElement('li');
-    let listText = document.createElement('span');
-    let listBtn = document.createElement('button');
+    listItem.appendChild(listText);                 //infogar textSpan i li
+    listText.textContent = myItem;                  //infogar input i textSpan
+    listItem.appendChild(listBtn);                  //infogar knapp i li
+    listBtn.textContent = "Delete";                 //infogar text i knapp
+    list.appendChild(listItem);                     // infogar li i ul
 
-    listItem.appendChild(listText);
-    listText.textContent = myItem;
-    listItem.appendChild(listBtn);
-    listBtn.textContent = "Delete";
+    //tar bort li-element
+    listBtn.addEventListener('click', () => {
+        list.removeChild(listItem);
+    });
 
-    list.appendChild(listItem);
-
-
-listBtn.addEventListener('click', () => {
-    list.removeChild(listItem);
-});
-
-input.focus();
-input.value = '';
-
+    input.focus();
+    input.value = '';
 }
-
+//Lägg till input i ul, via knapp
 btn.addEventListener('click', addItem);
-
+//Lägg till input i ul, via Enter
 input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         addItem();
